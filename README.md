@@ -3,9 +3,11 @@
 This repo contains the code and styles used to add Skatteetaten theme to Statuspage.
 It was forked from a similar project at Digdir.
 
+The live statuspage for Skatteetaten can be found at [status.skatteetaten.no](https://status.skatteetaten.no).
+
 ## Usage
 
-The following three files in the 'src' folder is uploaded to statuspage using the web interface at https://manage.statuspage.io/.
+The following three files in the 'src' folder is uploaded to statuspage using the web interface at [manage.statuspage.io](https://manage.statuspage.io/).
 
 Go to "Your Page" -> "Customize page and emails"
 
