@@ -1,0 +1,5316 @@
+/**************************
+ * Skatteetaten status CSS v0.2.0 (tidligere Digdir status CSS v0.5.0)
+ **************************/
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css";
+:root {
+  --color-step-900: #192432;
+  --color-step-800: #1e2b3c;
+  --color-step-700: #243348;
+  --color-step-600: #384b61;
+  --color-step-500: #6c8093;
+  --color-step-400: #b4bbc4;
+  --color-step-300: #ececec;
+  --color-step-200: #f5f5f5;
+  --color-step-100: #ffffff;
+  --color-brand-first-600: #f45f63;
+  --color-brand-second-600: #e5aa20;
+  --color-brand-third-600: #1e98f5;
+  --color-interface-accessiblity: #98177e;
+  --color-success: #316f2a;
+  --color-success-dark: #0fac44;
+  --color-success-light: #e3f5ea;
+  --color-danger: #a82e39;
+  --color-danger-dark: #cd3727;
+  --color-danger-light: #f7e2e8;
+  --color-maintenance: #1362ae;
+  --color-maintenance-dark: #093e61;
+  --color-maintenance-light: #cde1f9;
+  --color-info: #996f02;
+  --color-info-dark: #cea600;
+  --color-info-light: #ffefbd;
+  --color-warning: #996f02;
+  --color-warning-dark: #cea600;
+  --color-warning-light: #f9ede2;
+  --icon-critical: "";
+  --icon-major: "";
+  --icon-minor: "";
+  --icon-maintenance: "";
+  --color-link: #0062b8;
+  --color-background: #ece6e8;
+  --color-foreground: var(--color-step-100);
+  --color-top-bar: var(--color-step-100);
+  --color-footer: #6f2c3f;
+  --color-footer-text: var(--color-step-100);
+  --color-footer-text-desc: #d9d9d9;
+  --color-text: var(--color-step-800);
+  --color-text-desc: var(--color-step-600);
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --radius-card: 2px;
+  --transition-btn: 0.1s;
+  --border-incident: var(--color-step-300);
+  --section-spacing: 48px;
+}
+:root {
+  --logo-path: url("https://www.skatteetaten.no/globalassets/design/logo/eksempler/skatteetaten-logo-horisontal-rgb-svart.png");
+  --logo-path-white: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-03/Status%20-%20hvit.svg");
+  --path-id-porten: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20ID-porten.svg");
+  --path-kontakt: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20kontakt%20og%20serevasjonsregisteret.svg");
+  --path-einnsyn: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20eInnsyn.svg");
+  --path-eformidling: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20eFormidling.svg");
+  --path-elma: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20ELMA.svg");
+  --path-maskinporten: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20Maskinporten.svg");
+  --path-digital-postkasse: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20Digital%20postkasse.svg");
+  --path-esignering: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20eSignering.svg");
+  --path-c2n: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-09/c2n-logo-02.svg");
+  --path-ansattporten: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-09/ansattporten-02.svg");
+  --component-image-1: var(--path-id-porten);
+  --component-image-2: var(--path-kontakt);
+  --component-image-3: var(--path-einnsyn);
+  --component-image-4: var(--path-eformidling);
+  --component-image-5: var(--path-elma);
+  --component-image-6: var(--path-maskinporten);
+  --component-image-7: var(--path-digital-postkasse);
+  --component-image-8: var(--path-esignering);
+  --component-image-9: var(--path-c2n);
+  --component-image-10: var(--path-ansattporten);
+  --component-image-11: var(--path-id-porten);
+  --component-image-12: var(--path-id-porten);
+  --component-image-13: var(--path-id-porten);
+}
+@media (max-width: 991.98px) {
+  :root {
+    --section-spacing: 32px;
+  }
+}
+.status-none > .status {
+  color: var(--color-text) !important;
+}
+body,
+button,
+label {
+  font-size: 16px;
+  font-family: "Inter", sans-serif !important;
+  color: #1e2b3c;
+}
+body {
+  background-color: var(--color-background) !important;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+body .layout-content.status.status-index .container {
+  max-width: 1030px;
+  width: 100%;
+  padding: 0 16px;
+}
+body .layout-content.status .custom-header-container {
+  margin-bottom: var(--section-spacing);
+}
+body .layout-content.status .custom-header-container .header {
+  background-color: var(--color-top-bar);
+  max-width: inherit;
+  width: 100%;
+  border-bottom: 1px solid #dadcde;
+  position: relative;
+}
+.header-gfx {
+  content: "";
+  width: 100%;
+  height: 20px;
+  line-height: 1px;
+  display: block;
+}
+body .layout-content.status .custom-header-container .header .header-top {
+  padding: 19px 0;
+  border-bottom: 1px solid var(--color-step-300);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  .header-top
+  .header-back {
+  color: var(--color-text-desc);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  .header-top
+  .header-back:hover {
+  text-decoration: underline;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  .header-top
+  .header-back:before {
+  font-family: FontAwesome, sans-serif;
+  content: "";
+  font-weight: 100;
+  margin-right: 9px;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .header-bottom {
+  height: 88px;
+  max-width: 1030px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .header-bottom {
+    height: 80px;
+  }
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .logo-container
+  a {
+  height: 63px;
+  width: 175px;
+  display: inline-block;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  button {
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+  height: 42px;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  button:focus {
+  outline: none;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .theme-switcher {
+    display: none;
+    padding: 16px 11px 16px 15px;
+    border-top: 1px solid var(--color-step-300);
+    border-bottom: 1px solid var(--color-step-300);
+    margin-right: 0;
+  }
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .theme-switcher
+    label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .label-title {
+  margin-right: 8px;
+  color: var(--color-text-desc);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: var(--transition-btn) color;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  label:hover
+  .label-title {
+  color: var(--color-step-900);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 22px;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch
+  input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch
+  input:checked
+  + .slider {
+  background-color: var(--color-step-500);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch
+  input:checked
+  + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+  background-color: var(--color-step-800);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch
+  input:focus
+  + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch
+  .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-step-400);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .theme-switcher
+  .switch
+  .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container {
+  color: #666;
+  top: auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .updates-dropdown-container {
+    z-index: 10;
+  }
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container
+  .show-updates-dropdown {
+  background-color: var(--color-top-bar);
+  text-transform: inherit;
+  padding: 0 22px;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  color: var(--color-step-700);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 46px;
+  border: 2px solid var(--color-step-600);
+  transition: 0.15s all;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .updates-dropdown-container
+    .show-updates-dropdown {
+    padding: 16px 16px 16px 16px;
+  }
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container
+  .show-updates-dropdown:hover {
+  background-color: var(--color-maintenance-light);
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container
+  .show-updates-dropdown:after {
+  font-family: FontAwesome, sans-serif;
+  content: "";
+  color: var(--color-link);
+  font-size: 17px;
+  margin-left: 10px;
+  display: none;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container
+  .updates-dropdown {
+  right: 0px;
+  top: 100px;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .updates-dropdown-container
+    .updates-dropdown {
+    left: auto;
+    top: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status
+    .custom-header-container
+    .header
+    > .container
+    .updates-dropdown-container
+    .updates-dropdown {
+    top: 80px;
+    right: 0;
+    width: 100%;
+    margin-left: auto;
+  }
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container
+  .updates-dropdown
+  #updates-dropdown-email
+  a {
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+  font-size: 15px;
+}
+body
+  .layout-content.status
+  .custom-header-container
+  .header
+  > .container
+  .updates-dropdown-container
+  .updates-dropdown
+  #updates-dropdown-email
+  a:hover {
+  text-decoration: underline;
+}
+.page-footer {
+  display: none;
+}
+.footer {
+  margin-top: 72px;
+  position: relative;
+  overflow: hidden;
+}
+.footer .footer-top {
+  height: 85px;
+  margin-bottom: -7px;
+}
+.footer__social {
+  margin-top: 2px;
+  margin-right: 20px;
+  background-color: var(--color-step-900);
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.footer__social span {
+  font-size: 18px;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.footer__social:hover {
+  color: #fff;
+  text-decoration: none !important;
+  background-color: var(--color-step-600);
+}
+.footer__social:before {
+  display: none !important;
+}
+.footer__logo {
+  height: 38px;
+  width: 150px;
+  margin-bottom: 14px;
+  margin-left: -5px;
+}
+.footer__desc {
+  color: var(--color-footer-text-desc);
+  line-height: 1.8em;
+  font-size: 16px;
+}
+.footer__item {
+  margin-bottom: 13px;
+}
+.footer .wrapper {
+  background-color: var(--color-footer);
+  padding: 72px 0;
+  color: var(--color-footer-text-desc);
+}
+.footer .wrapper .container {
+  padding: 0 15px;
+  max-width: 1030px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer .wrapper .container .row {
+  display: flex;
+  margin: 0 -15px;
+}
+@media (max-width: 991.98px) {
+  .footer .wrapper .container .row {
+    flex-direction: column;
+  }
+}
+.footer .wrapper .container .row .col-md-4 {
+  width: 34.3334%;
+  padding: 0 14px;
+}
+@media (max-width: 991.98px) {
+  .footer .wrapper .container .row .col-md-4 {
+    width: 100%;
+  }
+}
+.footer .wrapper .container .row .col-md-4:nth-child(2) {
+  padding: 0 75px;
+}
+@media (max-width: 991.98px) {
+  .footer .wrapper .container .row .col-md-4:nth-child(2) {
+    padding: 40px 15px;
+  }
+}
+.footer .wrapper .container .row .col-md-4:nth-child(2),
+.footer .wrapper .container .row .col-md-4:nth-child(3) {
+  margin-top: 9px;
+}
+.footer .wrapper .container .row .col-md-4 .footer__item:last-child {
+  margin-bottom: 0;
+}
+.footer__heading {
+  font-size: 18px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  color: var(--color-footer-text);
+}
+.footer__label {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 400;
+}
+.footer__item {
+  color: var(--color-footer-text-desc);
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  font-weight: 300;
+}
+.footer__item a {
+  color: var(--color-footer-text-desc);
+  display: flex;
+  align-items: baseline;
+  font-weight: 400;
+}
+.footer__item a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer__item a:before {
+  content: "";
+  font-family: "FontAwesome", sans-serif;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 17px;
+}
+body .layout-content.status.status-index .container .components-section,
+body .layout-content.status.status-full-history .container .components-section,
+body .layout-content.status.status-incident .container .components-section {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 32px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns {
+  margin: 0 -15px -24px -15px;
+  padding-top: 3px;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .components-section
+    .components-container.two-columns,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .components-section
+    .components-container.two-columns,
+  body
+    .layout-content.status.status-incident
+    .container
+    .components-section
+    .components-container.two-columns {
+    margin: 0;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container {
+  margin: 0 15px 30px 15px;
+  width: calc(50% - 30px);
+  background-color: var(--color-foreground);
+  border: none;
+  padding: 32px;
+  box-shadow: inset 0 0 0 1px #dadcde;
+  border-radius: 8px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container.is-group,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container.is-group,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container.is-group {
+  padding: 0;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button {
+  width: 100%;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 32px;
+  transition: 0.15s all;
+  border-radius: 8px;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    button,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    button,
+  body
+    .layout-content.status.status-incident
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    button {
+    padding: 24px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button:hover {
+  background-color: #f4f5f6;
+  box-shadow: inset 0 0 0 2px #78808a;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button:focus,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button:focus,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  button:focus {
+  outline: none;
+}
+@media (max-width: 991.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container,
+  body
+    .layout-content.status.status-incident
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container {
+    width: 100%;
+    padding: 24px;
+    margin: 0 15px 20px 0;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container:before {
+  content: "";
+  height: 31px;
+  width: 31px;
+  display: block;
+  margin-right: 15px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .name,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .name,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .name {
+  margin-right: auto;
+  color: var(--color-step-800);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .name
+  .group-parent-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .name
+  .group-parent-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .name
+  .group-parent-indicator {
+  color: var(--color-step-800);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .tool.icon-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .tool.icon-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .tool.icon-indicator {
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: auto;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .tooltip-base,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .tooltip-base,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .component-inner-container
+  .tooltip-base {
+  color: var(--color-step-700);
+  border: 1px solid var(--color-step-700);
+  height: 22px;
+  width: 22px;
+  line-height: 22px;
+  margin-left: 6px;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    .component-inner-container
+    .component-status,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    .component-inner-container
+    .component-status,
+  body
+    .layout-content.status.status-incident
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    .component-inner-container
+    .component-status {
+    display: none;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container {
+  padding: 12px 32px 32px 83px;
+  border-top: 1px solid var(--color-step-300);
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    .child-components-container,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    .child-components-container,
+  body
+    .layout-content.status.status-incident
+    .container
+    .components-section
+    .components-container.two-columns
+    .component-container
+    .child-components-container {
+    padding: 0 24px 24px 73px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container:before {
+  display: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container
+  span:first-child,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container
+  span:first-child,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container
+  span:first-child {
+  display: flex;
+  align-items: center;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container
+  span:first-child:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container
+  span:first-child:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container
+  .child-components-container
+  .component-inner-container
+  span:first-child:before {
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--color-step-600);
+  display: inline-block;
+  margin-right: 10px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(1)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(1)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(1)
+  .component-inner-container:before {
+  background-image: var(--component-image-1);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(2)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(2)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(2)
+  .component-inner-container:before {
+  background-image: var(--component-image-2);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(3)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(3)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(3)
+  .component-inner-container:before {
+  background-image: var(--component-image-3);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(4)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(4)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(4)
+  .component-inner-container:before {
+  background-image: var(--component-image-4);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(5)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(5)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(5)
+  .component-inner-container:before {
+  background-image: var(--component-image-5);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(6)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(6)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(6)
+  .component-inner-container:before {
+  background-image: var(--component-image-6);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(7)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(7)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(7)
+  .component-inner-container:before {
+  background-image: var(--component-image-7);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(8)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(8)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(8)
+  .component-inner-container:before {
+  background-image: var(--component-image-8);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(9)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(9)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(9)
+  .component-inner-container:before {
+  background-image: var(--component-image-9);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(10)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(10)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(10)
+  .component-inner-container:before {
+  background-image: var(--component-image-10);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(11)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(11)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(11)
+  .component-inner-container:before {
+  background-image: var(--component-image-11);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(12)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(12)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(12)
+  .component-inner-container:before {
+  background-image: var(--component-image-12);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(13)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(13)
+  .component-inner-container:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .components-container.two-columns
+  .component-container:nth-child(13)
+  .component-inner-container:before {
+  background-image: var(--component-image-13);
+  background-repeat: no-repeat;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .component-statuses-legend,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .component-statuses-legend,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .component-statuses-legend {
+  margin-bottom: 34px;
+  margin-top: 10px;
+  display: flex;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item {
+  color: var(--color-step-800);
+  font-size: 15px;
+  margin-right: 40px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item
+  span,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item
+  span,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item
+  span {
+  margin-right: 7px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item
+  span:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item
+  span:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .components-section
+  .component-statuses-legend
+  .legend-item
+  span:before {
+  font-size: 16px;
+}
+body .layout-content.status.status-index .container .history-backpage,
+body .layout-content.status.status-full-history .container .history-backpage,
+body .layout-content.status.status-incident .container .history-backpage {
+  margin-top: 24px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector {
+  background-color: var(--color-foreground);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > span,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > span,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > span {
+  display: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button {
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--color-step-600);
+  border-radius: 4px;
+  color: var(--color-text);
+  background-color: #fff;
+  font-weight: 500;
+  transition: 0.2s all;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .history-backpage
+    .history-header
+    .component-selector
+    > button,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .history-backpage
+    .history-header
+    .component-selector
+    > button,
+  body
+    .layout-content.status.status-incident
+    .container
+    .history-backpage
+    .history-header
+    .component-selector
+    > button {
+    width: 100%;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button:focus,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button:focus,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button:focus {
+  outline: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span {
+  transition: var(--transition-btn);
+  display: block;
+  border-radius: 4px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span.open,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span.open,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span.open {
+  background-color: var(--color-foreground);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  > button
+  span:hover {
+  background-color: var(--color-maintenance-light);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector {
+  background-color: var(--color-foreground);
+  border: none;
+  left: 15px;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .history-backpage
+    .history-header
+    .component-selector
+    .grouped-items-selector,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .history-backpage
+    .history-header
+    .component-selector
+    .grouped-items-selector,
+  body
+    .layout-content.status.status-incident
+    .container
+    .history-backpage
+    .history-header
+    .component-selector
+    .grouped-items-selector {
+    width: calc(100% - 30px);
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .header,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .header,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .header {
+  border: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item {
+  border: none;
+  border-bottom: 1px solid var(--color-step-300);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item-label,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item-label,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item-label {
+  color: var(--color-text);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item
+  .kwyKUp
+  rect:first-child,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item
+  .kwyKUp
+  rect:first-child,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item
+  .kwyKUp
+  rect:first-child {
+  stroke: #d2d2d5;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item
+  .dILUgb,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item
+  .dILUgb,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .component-selector
+  .grouped-items-selector
+  .body
+  .grouped-items
+  .grouped-item
+  .dILUgb {
+  align-items: center;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a {
+  background-color: var(--color-foreground);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-step-400);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a:hover:not(.disabled),
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a:hover:not(.disabled),
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a:hover:not(.disabled) {
+  background-color: var(--color-step-200);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a
+  i:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a
+  i:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  a
+  i:before {
+  color: var(--color-text-desc);
+  font-size: 12px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  .current,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  .current,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .history-header
+  .pagination-container
+  .pagination
+  .current {
+  color: var(--color-text-desc);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-title {
+  border-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 25px;
+  padding-bottom: 0;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history {
+  text-align: center;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list {
+  text-align: left;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .small,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .small,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .small {
+  color: var(--color-text-desc);
+  font-size: 16px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container {
+  background-color: var(--color-foreground);
+  box-shadow: inset 0 0 0 1px #dadcde;
+  padding: 32px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  transition: 0.15s all;
+  position: relative;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__div,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__div,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__div {
+  display: none !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:after,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:after,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:after {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  font-family: "FontAwesome", sans-serif;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s all;
+  font-size: 28px;
+  font-weight: 100;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:hover {
+  background-color: var(--color-step-200) !important;
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 2px #78808a;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:hover:after,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:hover:after,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container:hover:after {
+  transform: translateX(6px);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__title,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__title {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__title:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__title:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container__title:before {
+  font-family: "FontAwesome", sans-serif;
+  font-weight: 900;
+  margin-right: 8px;
+  font-size: 16px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor {
+  color: var(--color-info);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor:hover {
+  background-color: var(--color-info-light);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor
+  .incident-container__title:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor
+  .incident-container__title:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-minor
+  .incident-container__title:before {
+  content: var(--icon-minor);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major {
+  color: var(--color-warning);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major:hover {
+  background-color: var(--color-warning-light);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major
+  .incident-container__title:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major
+  .incident-container__title:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-major
+  .incident-container__title:before {
+  content: var(--icon-major);
+  font-size: 15px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical {
+  color: var(--color-danger);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical:hover {
+  background-color: var(--color-danger-light);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical
+  .incident-container__title:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical
+  .incident-container__title:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-critical
+  .incident-container__title:before {
+  content: var(--icon-critical);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance {
+  color: var(--color-maintenance);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance:hover {
+  background-color: var(--color-maintenance-light);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance
+  .incident-container__title:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance
+  .incident-container__title:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container.impact-maintenance
+  .incident-container__title:before {
+  content: var(--icon-maintenance);
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .history-backpage
+    .months-container
+    .month
+    .month-content
+    .incident-history
+    .incident-list
+    .incident-container,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .history-backpage
+    .months-container
+    .month
+    .month-content
+    .incident-history
+    .incident-list
+    .incident-container,
+  body
+    .layout-content.status.status-incident
+    .container
+    .history-backpage
+    .months-container
+    .month
+    .month-content
+    .incident-history
+    .incident-list
+    .incident-container {
+    padding: 24px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container
+  a:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container
+  a:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container
+  a:hover {
+  text-decoration: underline;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container
+  .incident-body,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container
+  .incident-body,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .incident-list
+  .incident-container
+  .incident-body {
+  margin: 9px 0 8px 0;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  margin-top: 10px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button {
+  border: 1px solid var(--color-step-400);
+  background-color: var(--color-foreground);
+  height: 52px;
+  border-radius: 52px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var {
+  pointer-events: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var:nth-child(1),
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var:nth-child(1),
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var:nth-child(1) {
+  padding-right: 5px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var:nth-child(3),
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var:nth-child(3),
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button
+  var:nth-child(3) {
+  padding-left: 5px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button:focus,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button:focus,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button:focus {
+  outline: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  button:hover {
+  background-color: var(--color-step-200);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  > span,
+body
+  .layout-content.status.status-full-history
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  > span,
+body
+  .layout-content.status.status-incident
+  .container
+  .history-backpage
+  .months-container
+  .month
+  .month-content
+  .incident-history
+  .expand-incidents
+  > span {
+  display: none;
+}
+body .layout-content.status.status-index .container .incident-updates-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incident-updates-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .incident-updates-container {
+  background-color: var(--color-foreground);
+  border: 1px solid #dadcde;
+  border-radius: 8px;
+  padding: 40px;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .incident-updates-container,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .incident-updates-container,
+  body
+    .layout-content.status.status-incident
+    .container
+    .incident-updates-container {
+    padding: 24px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incident-updates-container
+  .update-row
+  h1,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incident-updates-container
+  .update-row
+  h1,
+body
+  .layout-content.status.status-incident
+  .container
+  .incident-updates-container
+  .update-row
+  h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incident-updates-container
+  .update-row
+  .update-timestamp,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incident-updates-container
+  .update-row
+  .update-timestamp,
+body
+  .layout-content.status.status-incident
+  .container
+  .incident-updates-container
+  .update-row
+  .update-timestamp {
+  margin-top: 6px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incident-updates-container
+  .components-affected,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incident-updates-container
+  .components-affected,
+body
+  .layout-content.status.status-incident
+  .container
+  .incident-updates-container
+  .components-affected {
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid var(--color-step-400);
+  padding: 30px 24px 0 0;
+  margin-top: 30px;
+}
+body .layout-content.status.status-index .container .incidents-list,
+body .layout-content.status.status-full-history .container .incidents-list,
+body .layout-content.status.status-incident .container .incidents-list {
+  margin-top: var(--section-spacing);
+}
+body .layout-content.status.status-index .container .incidents-list__history,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list__history,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list__history {
+  font-weight: 500;
+  border: 2px solid var(--color-step-600);
+  border-radius: 54px;
+  height: 56px;
+  line-height: 54px;
+  padding: 0 26px;
+  background-color: var(--color-foreground);
+  font-size: 16px;
+  color: var(--color-text);
+  transition: 0.1s all;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list__history-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list__history-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list__history-container {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list__history:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list__history:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list__history:hover {
+  text-decoration: none;
+  background-color: var(--color-maintenance-light);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .font-largest,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .font-largest,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .font-largest {
+  color: var(--color-step-800);
+  font-size: 25px;
+  margin-bottom: -2px !important;
+  display: block;
+}
+body .layout-content.status.status-index .container .incidents-list .status-day,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day {
+  background-color: var(--color-foreground);
+  padding: 24px 32px;
+  border-radius: 8px;
+  border: 1px solid #dadcde;
+  margin-top: 24px;
+}
+.info-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-weight: bold;
+}
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.separator {
+  width: 1px;
+  height: 35px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+.pilot-container {
+  padding-top: 3px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-warning);
+  align-self: center;
+  justify-self: center;
+  font-family: "Inter", sans-serif !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day:first-child,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day:first-child,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day:first-child {
+  margin-top: 18px !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day:nth-child(n + 9),
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day:nth-child(n + 9),
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day:nth-child(n + 9) {
+  display: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  p,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  p,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  p {
+  color: var(--color-text);
+  margin-top: 5px;
+  font-weight: 300;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .date,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .date,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .date {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 18px;
+  color: var(--color-text-desc);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .date.border-color,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .date.border-color,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .date.border-color {
+  border-color: rgba(0, 0, 0, 0);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container {
+  border-top: 1px solid var(--border-incident);
+  padding: 19px 0;
+  margin-bottom: 0;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container:nth-child(2),
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container:nth-child(2),
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container:nth-child(2) {
+  margin-top: 19px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container:last-child,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container:last-child,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container:last-child {
+  padding-bottom: 0;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title:hover {
+  text-decoration: underline !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-none.font-large
+  a,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-none.font-large
+  a,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-none.font-large
+  a {
+  color: var(--color-step-800);
+}
+a
+  body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title:before,
+a
+  body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title:before,
+a
+  body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title:before {
+  font-family: "FontAwesome", sans-serif;
+  margin-right: 8px;
+  font-weight: 100;
+  font-size: 18px;
+}
+a
+  body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-maintenance:before,
+a
+  body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-maintenance:before,
+a
+  body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-maintenance:before {
+  content: var(--icon-maintenance);
+  color: var(--color-maintenance);
+}
+a
+  body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-critical:before,
+a
+  body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-critical:before,
+a
+  body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-critical:before {
+  content: var(--icon-critical);
+  color: var(--color-danger);
+}
+a
+  body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-minor:before,
+a
+  body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-minor:before,
+a
+  body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .incident-title.impact-minor:before {
+  content: var(--icon-minor);
+  color: var(--color-info);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update {
+  height: auto;
+  font-weight: 400;
+  color: var(--color-step-800);
+  margin: 20px 0;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update
+  strong,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update
+  strong,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update
+  strong {
+  font-weight: 500;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update
+  small,
+body
+  .layout-content.status.status-full-history
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update
+  small,
+body
+  .layout-content.status.status-incident
+  .container
+  .incidents-list
+  .status-day
+  .incident-container
+  .updates-container
+  .update
+  small {
+  color: var(--color-step-700);
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 15px;
+}
+@media (max-width: 991.98px) {
+  :root {
+    --section-spacing: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .info-text,
+  .separator {
+    display: none;
+  }
+}
+body {
+  background-color: var(--color-background) !important;
+}
+body.status {
+  color: var(--color-text) !important;
+}
+body p a {
+  color: var(--color-link);
+  font-weight: 500;
+}
+body .layout-content.status.status-index .subscribe-button,
+body .layout-content.status.status-full-history .subscribe-button,
+body .layout-content.status.status-incident .subscribe-button {
+  margin-top: 30px;
+}
+body .layout-content.status.status-index .container,
+body .layout-content.status.status-full-history .container,
+body .layout-content.status.status-incident .container {
+  max-width: 1030px;
+  width: 100%;
+  padding: 0 16px;
+}
+body .layout-content.status.status-index .container h4,
+body .layout-content.status.status-full-history .container h4,
+body .layout-content.status.status-incident .container h4 {
+  color: var(--color-text);
+  font-size: 25px;
+  font-weight: 500;
+}
+body .layout-content.status.status-index .container .page-status,
+body .layout-content.status.status-full-history .container .page-status,
+body .layout-content.status.status-incident .container .page-status {
+  padding: 24px;
+  border-radius: 2px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .status-green
+  .icon-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .status-green
+  .icon-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .status-green
+  .icon-indicator {
+  color: var(--color-success);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .status-yellow
+  .icon-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .status-yellow
+  .icon-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .status-yellow
+  .icon-indicator {
+  color: var(--color-info);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .status-orange
+  .icon-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .status-orange
+  .icon-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .status-orange
+  .icon-indicator {
+  color: var(--color-warning);
+}
+body .layout-content.status.status-index .container .status-red .icon-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .status-red
+  .icon-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .status-red
+  .icon-indicator {
+  color: var(--color-danger);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .status-blue
+  .icon-indicator,
+body
+  .layout-content.status.status-full-history
+  .container
+  .status-blue
+  .icon-indicator,
+body
+  .layout-content.status.status-incident
+  .container
+  .status-blue
+  .icon-indicator {
+  color: var(--color-maintenance);
+}
+body .layout-content.status.status-index .container .text-section,
+body .layout-content.status.status-full-history .container .text-section,
+body .layout-content.status.status-incident .container .text-section {
+  margin-bottom: 0px;
+  width: 70%;
+}
+body .layout-content.status.status-index .container .text-section h4,
+body .layout-content.status.status-full-history .container .text-section h4,
+body .layout-content.status.status-incident .container .text-section h4 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: var(--color-step-800);
+}
+body .layout-content.status.status-index .container .text-section p,
+body .layout-content.status.status-full-history .container .text-section p,
+body .layout-content.status.status-incident .container .text-section p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: var(--color-step-700);
+  line-height: 1.6em;
+}
+body .layout-content.status.status-index .container .color-primary,
+body .layout-content.status.status-full-history .container .color-primary,
+body .layout-content.status.status-incident .container .color-primary {
+  color: var(--color-text);
+}
+body .layout-content.status.status-index .container .color-secondary,
+body .layout-content.status.status-full-history .container .color-secondary,
+body .layout-content.status.status-incident .container .color-secondary {
+  color: var(--color-text-desc);
+}
+body.status.index .other-links {
+  display: block;
+}
+.other-links {
+  display: none;
+}
+.other-links__seperator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-step-400);
+  margin: 48px 0 16px 0;
+}
+.other-links__title {
+  padding-top: 24px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.other-links__desc {
+  margin-top: 8px;
+  width: 75%;
+}
+@media (max-width: 767.98px) {
+  .other-links__desc {
+    width: 100%;
+  }
+}
+.other-links__items {
+  margin-top: 28px;
+}
+.other-links__item {
+  display: block;
+  width: 100%;
+  padding: 32px;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--color-foreground);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #dadcde;
+  transition: 0.15s all;
+  position: relative;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.other-links__item:hover {
+  background-color: var(--color-step-200);
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 2px #78808a;
+}
+.other-links__item:after {
+  position: absolute;
+  right: 32px;
+  top: 0;
+  bottom: 0;
+  font-family: "FontAwesome", sans-serif;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s all;
+  font-size: 26px;
+}
+.other-links__item:last-child {
+  margin-bottom: 0;
+}
+body .layout-content.status.status-index .container .page-status,
+body .layout-content.status.status-full-history .container .page-status,
+body .layout-content.status.status-incident .container .page-status {
+  margin-bottom: var(--section-spacing);
+  box-shadow: var(--shadow-card);
+  border-radius: 8px;
+}
+body .layout-content.status.status-index .container .page-status.status-minor,
+body
+  .layout-content.status.status-full-history
+  .container
+  .page-status.status-minor,
+body
+  .layout-content.status.status-incident
+  .container
+  .page-status.status-minor {
+  background-color: var(--color-info);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .page-status.status-maintenance,
+body
+  .layout-content.status.status-full-history
+  .container
+  .page-status.status-maintenance,
+body
+  .layout-content.status.status-incident
+  .container
+  .page-status.status-maintenance {
+  background-color: var(--color-maintenance);
+}
+body .layout-content.status.status-index .container .page-status.status-none,
+body
+  .layout-content.status.status-full-history
+  .container
+  .page-status.status-none,
+body
+  .layout-content.status.status-incident
+  .container
+  .page-status.status-none {
+  background-color: var(--color-foreground) !important;
+  border: none;
+  padding: 32px;
+  box-shadow: inset 0 0 0 1px #dadcde;
+}
+@media (max-width: 991.98px) {
+  body .layout-content.status.status-index .container .page-status.status-none,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .page-status.status-none,
+  body
+    .layout-content.status.status-incident
+    .container
+    .page-status.status-none {
+    padding: 24px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .page-status.status-none
+  span,
+body
+  .layout-content.status.status-full-history
+  .container
+  .page-status.status-none
+  span,
+body
+  .layout-content.status.status-incident
+  .container
+  .page-status.status-none
+  span {
+  color: var(--color-step-800);
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .page-status.status-none
+  span:first-child:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .page-status.status-none
+  span:first-child:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .page-status.status-none
+  span:first-child:before {
+  margin-right: 16px;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "";
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid var(--color-success);
+  color: var(--color-success);
+  display: block;
+  flex: 0 0 40px;
+  font-size: 16px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container {
+  margin: var(--section-spacing) 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: -10px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .font-largest,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .font-largest,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .font-largest {
+  color: var(--color-step-800);
+  font-size: 25px;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  width: 100%;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance {
+  padding: 32px;
+  background-color: var(--color-foreground);
+  display: block;
+  position: relative;
+  transition: 0.15s all;
+  width: 100%;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #dadcde;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .scheduled-maintenances-container
+    .scheduled-maintenance,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .scheduled-maintenances-container
+    .scheduled-maintenance,
+  body
+    .layout-content.status.status-incident
+    .container
+    .scheduled-maintenances-container
+    .scheduled-maintenance {
+    padding: 24px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance:hover {
+  background-color: #f4f5f6;
+  box-shadow: inset 0 0 0 2px #1e2b3c;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance:hover
+  .scheduled-maintenance__title:after,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance:hover
+  .scheduled-maintenance__title:after,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance:hover
+  .scheduled-maintenance__title:after {
+  transform: translateX(6px);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title {
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  padding-right: 24px;
+}
+@media (max-width: 767.98px) {
+  body
+    .layout-content.status.status-index
+    .container
+    .scheduled-maintenances-container
+    .scheduled-maintenance__title,
+  body
+    .layout-content.status.status-full-history
+    .container
+    .scheduled-maintenances-container
+    .scheduled-maintenance__title,
+  body
+    .layout-content.status.status-incident
+    .container
+    .scheduled-maintenances-container
+    .scheduled-maintenance__title {
+    margin-bottom: 8px;
+  }
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title:before {
+  font-family: "FontAwesome", sans-serif;
+  content: "";
+  font-weight: 900;
+  margin-right: 4px;
+  font-size: 16px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title:after,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title:after,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance__title:after {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  font-family: "FontAwesome", sans-serif;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s all;
+  font-size: 28px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title {
+  border-color: var(--border-incident) !important;
+  padding: 0;
+  font-size: 18px;
+  margin-bottom: 0;
+  border: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  a,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  a,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  a {
+  color: var(--color-maintenance);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  a:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  a:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  a:hover {
+  text-decoration: underline;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  small,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  small,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  small {
+  color: var(--color-step-800);
+  float: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  small:before,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  small:before,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .incident-title
+  small:before {
+  content: "Planlagt til ";
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .updates-container,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .updates-container,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .updates-container {
+  display: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .update,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .update,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .update {
+  color: var(--color-step-800);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .update
+  small,
+body
+  .layout-content.status.status-full-history
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .update
+  small,
+body
+  .layout-content.status.status-incident
+  .container
+  .scheduled-maintenances-container
+  .scheduled-maintenance
+  .update
+  small {
+  color: var(--color-step-700);
+  display: inline-block;
+  margin-top: 6px;
+}
+body .layout-content.status.status-incident > .container {
+  margin-top: 60px;
+}
+body .layout-content.status.status-incident .page-title {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #dadcde;
+}
+body .layout-content.status.status-incident .page-title .incident-name {
+  padding-top: 72px;
+  padding-bottom: 22px;
+  font-size: 32px;
+  color: inherit;
+}
+@media (max-width: 767.98px) {
+  body .layout-content.status.status-incident .page-title .incident-name {
+    padding: 54px 15px 15px 15px;
+  }
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-none {
+  background-color: #fff;
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-none
+  + .subheader {
+  background-color: #fff;
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-maintenance {
+  background-color: var(--color-maintenance-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-maintenance
+  + .subheader {
+  background-color: var(--color-maintenance-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-minor {
+  background-color: var(--color-info-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-minor
+  + .subheader {
+  background-color: var(--color-info-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-major {
+  background-color: var(--color-warning-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-major
+  + .subheader {
+  background-color: var(--color-warning-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-critical {
+  background-color: var(--color-danger-light);
+}
+body
+  .layout-content.status.status-incident
+  .page-title
+  .incident-name.impact-critical
+  + .subheader {
+  background-color: var(--color-danger-light);
+}
+body .layout-content.status.status-incident .page-title .subheader {
+  padding-bottom: 72px;
+  font-size: 25px;
+  display: block !important;
+  border-bottom: 1px solid var(--color-step-300);
+  color: #4b5563;
+}
+@media (max-width: 767.98px) {
+  body .layout-content.status.status-incident .page-title .subheader {
+    padding: 0 15px 54px 15px;
+  }
+}
+body .layout-content.status.status-incident .page-title .scheduled-for:before {
+  content: "Planlagt til ";
+}
+body .layout-content.status.status-index .container .unresolved-incidents,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents,
+body .layout-content.status.status-incident .container .unresolved-incidents {
+  margin-bottom: var(--section-spacing);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident {
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-none
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-none
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-none
+  .incident-title {
+  background-color: var(--color-step-600);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-none
+  .incident-title:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-none
+  .incident-title:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-none
+  .incident-title:hover {
+  background-color: #000;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-maintenance
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-maintenance
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-maintenance
+  .incident-title {
+  background-color: var(--color-maintenance) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-maintenance
+  .incident-title:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-maintenance
+  .incident-title:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-maintenance
+  .incident-title:hover {
+  background-color: var(--color-maintenance-dark) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-critical
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-critical
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-critical
+  .incident-title {
+  background-color: var(--color-danger) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-critical
+  .incident-title:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-critical
+  .incident-title:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-critical
+  .incident-title:hover {
+  background-color: var(--color-danger-dark) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-major
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-major
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-major
+  .incident-title {
+  background-color: var(--color-warning) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-major
+  .incident-title:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-major
+  .incident-title:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-major
+  .incident-title:hover {
+  background-color: var(--color-warning-dark) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-minor
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-minor
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-minor
+  .incident-title {
+  background-color: var(--color-info) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-minor
+  .incident-title:hover,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-minor
+  .incident-title:hover,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident.impact-minor
+  .incident-title:hover {
+  background-color: var(--color-info-dark) !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title {
+  border-radius: 8px;
+  padding: 0;
+  transition: 0.15s all;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  a,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  a,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  a {
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  a:hover:after,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  a:hover:after,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  a:hover:after {
+  transform: translateX(5px);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .subscribe:after,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .subscribe:after,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .subscribe:after {
+  font-family: "FontAwesome", sans-serif;
+  content: "";
+  transition: 0.15s all;
+  font-size: 24px;
+  margin-right: 4px;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .actual-title,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .actual-title,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .actual-title {
+  width: 100% !important;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .subscribe,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .subscribe,
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .incident-title
+  .subscribe {
+  display: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates {
+  background-color: var(--color-foreground);
+  border-color: rgba(0, 0, 0, 0) !important;
+  padding: 24px;
+  border-radius: var(--radius-card);
+  display: none;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update {
+  color: var(--color-text);
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update
+  strong,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update
+  strong,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update
+  strong {
+  font-weight: 600;
+}
+body
+  .layout-content.status.status-index
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update
+  small,
+body
+  .layout-content.status.status-full-history
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update
+  small,
+body
+  .layout-content.status.status-incident
+  .container
+  .unresolved-incidents
+  .unresolved-incident
+  .updates
+  .update
+  small {
+  color: var(--color-text-desc);
+}
+body.keyboard-navigation *:focus {
+  z-index: 100 !important;
+  outline: 3px solid var(--color-interface-accessiblity) !important;
+  transition: none !important;
+  text-decoration: none !important;
+  outline-offset: 2px;
+}
+
+.updates-dropdown .terms_and_privacy_information a,
+.updates-dropdown .atom a,
+.incident-container .incident-title a {
+  text-decoration: underline;
+}
+.updates-dropdown .terms_and_privacy_information a:hover,
+.updates-dropdown .atom a:hover,
+.incident-container .incident-title a:hover,
+.flat-button:hover,
+#Header_logo:hover {
+  opacity: 0.6;
+}
+
+.layout-content.status.status-index
+  .components-section
+  .component-container
+  .name {
+  vertical-align: middle;
+  overflow: unset;
+  white-space: wrap;
+  text-overflow: initial;
+  display: inline-block;
+  font-weight: 500;
+  max-width: 75%;
+}
+
+.custom-header-container .header .skip-link {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #1a1a1a;
+  border: 0;
+  padding: 5px;
+  font-weight: 600;
+  position: absolute;
+  top: -6em;
+  left: 0;
+}
+
+.custom-header-container .header .skip-link .skip-link-heading {
+  width: max-content;
+  border-bottom: 4px solid #fff;
+  margin: auto;
+}
+.custom-header-container .header .skip-link:focus {
+  top: 0;
+}
+
+/*************************
+  * END - Skatteetaten status CSS
+  *************************/
