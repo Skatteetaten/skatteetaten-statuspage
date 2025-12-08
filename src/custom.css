@@ -1,5 +1,5 @@
 /**************************
- * Skatteetaten status CSS v0.2.0 (tidligere Digdir status CSS v0.5.0)
+ * Skatteetaten status CSS v0.2.1 (tidligere Digdir status CSS v0.5.0)
  **************************/
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css";
@@ -1228,13 +1228,14 @@ body
   .child-components-container
   .component-inner-container
   span:first-child:before {
-  content: "";
+  content: "" !important;
   height: 6px;
   width: 6px;
   border-radius: 50%;
   background-color: var(--color-step-600);
   display: inline-block;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 body
   .layout-content.status.status-index
@@ -5309,6 +5310,43 @@ body.keyboard-navigation *:focus {
 }
 .custom-header-container .header .skip-link:focus {
   top: 0;
+}
+
+/* CRITICAL FIX December25: Fix for Atlassian Statuspage updates - Force Font Awesome icons to display properly, remove mutiple lines showing */
+
+/* Ensure Font Awesome icons display in status indicators */
+body
+  .layout-content.status
+  .component-statuses-legend
+  .legend-item
+  span::before,
+body .layout-content.status .page-status-description span::before {
+  font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+  display: inline-block !important;
+}
+
+/* Force proper icon display in component status indicators */
+body .layout-content.status .icon-indicator {
+  font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+/* Statuspage bug - parent component HTML nested inside child's status button */
+/* Hide the entire component-inner-container that's incorrectly nested inside the button */
+body
+  .layout-content.status
+  .child-components-container
+  .component-inner-container
+  button.icon-indicator
+  .component-inner-container {
+  display: none !important;
+}
+
+/* Override any Statuspage styles that might interfere with Font Awesome */
+body .layout-content.status [class*="icon-"]::before {
+  font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
 }
 
 /*************************
