@@ -5578,6 +5578,62 @@ body .layout-content.status [class*="icon-"]::before {
   font-weight: 900 !important;
 }
 
+/* Test environment section */
+.testenv-section {
+  background-color: var(--color-background);
+  padding: 28px 0 32px;
+}
+
+.testenv-section__separator {
+  height: 1px;
+  background-color: var(--color-step-400);
+  margin-bottom: 24px;
+}
+
+.testenv-section__container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.testenv-section__heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 14px 0;
+}
+
+.testenv-section__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 32px;
+  border-radius: 8px;
+  background-color: var(--color-foreground);
+  box-shadow: inset 0 0 0 1px #dadcde;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.15s all;
+  border: none;
+  box-sizing: border-box;
+}
+
+.testenv-section__btn:hover {
+  background-color: var(--color-step-200);
+  box-shadow: inset 0 0 0 1px var(--color-step-400);
+  text-decoration: none;
+}
+
+.testenv-section__btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-text-desc);
+}
+
 /*************************
   * END - Skatteetaten status CSS
   *************************/
