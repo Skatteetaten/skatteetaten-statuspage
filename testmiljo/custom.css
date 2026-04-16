@@ -64,33 +64,20 @@
   --path-esignering: url("https://samarbeid.digdir.no/sites/samarbeid/files/2020-12/Ikon%20eSignering.svg");
   --path-c2n: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-09/c2n-logo-02.svg");
   --path-ansattporten: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-09/ansattporten-02.svg");
-  --path-ansattporten-kvitt: url("https://samarbeid.digdir.no/sites/samarbeid/files/2025-05/ansattporten%20ikon%20med%20kvitt1.2.svg");
   --path-selvbetjening: url("https://samarbeid.digdir.no/sites/samarbeid/files/2024-02/selvbetjening.svg");
-  --path-penger: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-04/Penger.svg");
-  --path-naeringsliv: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-03/N%E2%94%9C%C2%AAringsliv.svg");
-  --path-altinn-studiologo: url("https://samarbeid.digdir.no/sites/samarbeid/files/2024-09/AltinnStudio%20-%20kvit%20bakgrunn1.svg");
-  --path-begreper: url("https://samarbeid.digdir.no/sites/samarbeid/files/2021-04/Begrep.svg");
-  --path-dialogporten: url("https://samarbeid.digdir.no/sites/samarbeid/files/2024-07/Alternativ%2002%40_0.svg");
-  --component-image-1: var(--path-penger);
-  --component-image-2: var(--path-penger);
-  --component-image-3: var(--path-penger);
-  --component-image-4: var(--path-penger);
-  --component-image-5: var(--path-ansattporten);
-  --component-image-6: var(--path-esignering);
-  --component-image-7: var(--path-ansattporten);
-  --component-image-8: var(--path-esignering);
-  --component-image-9: var(--path-ansattporten-kvitt);
-  --component-image-10: var(--path-naeringsliv);
-  --component-image-11: var(--path-dialogporten);
-  --component-image-12: var(--path-eformidling);
-  --component-image-13: var(--path-altinn-studiologo);
-  --component-image-14: var(--path-eformidling);
-  --component-image-15: var(--path-altinn-studiologo);
-  --component-image-16: var(--path-begreper);
-  --component-image-17: var(--path-selvbetjening);
-  --component-image-18: var(--path-selvbetjening);
-  --component-image-19: var(--path-selvbetjening);
-  --component-image-20: var(--path-selvbetjening);
+  --component-image-1: var(--path-selvbetjening);
+  --component-image-2: var(--path-selvbetjening);
+  --component-image-3: var(--path-selvbetjening);
+  --component-image-4: var(--path-selvbetjening);
+  --component-image-5: var(--path-selvbetjening);
+  --component-image-6: var(--path-selvbetjening);
+  --component-image-7: var(--path-selvbetjening);
+  --component-image-8: var(--path-selvbetjening);
+  --component-image-9: var(--path-selvbetjening);
+  --component-image-10: var(--path-selvbetjening);
+  --component-image-11: var(--path-selvbetjening);
+  --component-image-12: var(--path-selvbetjening);
+  --component-image-13: var(--path-selvbetjening);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -1605,174 +1592,6 @@ body
   .component-container:nth-child(13)
   .component-inner-container:before {
   background-image: var(--component-image-13);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(14)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(14)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(14)
-  .component-inner-container:before {
-  background-image: var(--component-image-14);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(15)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(15)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(15)
-  .component-inner-container:before {
-  background-image: var(--component-image-15);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(16)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(16)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(16)
-  .component-inner-container:before {
-  background-image: var(--component-image-16);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(17)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(17)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(17)
-  .component-inner-container:before {
-  background-image: var(--component-image-17);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(18)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(18)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(18)
-  .component-inner-container:before {
-  background-image: var(--component-image-18);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(19)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(19)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(19)
-  .component-inner-container:before {
-  background-image: var(--component-image-19);
-  background-repeat: no-repeat;
-}
-body
-  .layout-content.status.status-index
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(20)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-full-history
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(20)
-  .component-inner-container:before,
-body
-  .layout-content.status.status-incident
-  .container
-  .components-section
-  .components-container.two-columns
-  .component-container:nth-child(20)
-  .component-inner-container:before {
-  background-image: var(--component-image-20);
   background-repeat: no-repeat;
 }
 body
@@ -3746,9 +3565,9 @@ body
   padding-top: 3px;
   width: 100%;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
-  color: var(--color-warning);
+  color: var(--color-info-dark);
   align-self: center;
   justify-self: center;
   font-family: "Inter", sans-serif !important;
